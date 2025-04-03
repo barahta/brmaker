@@ -1,0 +1,187 @@
+.bodymain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E1E1E1;
+  .main{
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100% - 80px);
+    display: flex;
+
+  }
+  .leftpath{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .centerpath{
+    width: calc(100% - 320px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .nav{
+      display: flex;
+      .back{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border: 1px solid #CCC;
+        margin: 20px 10px 20px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #454545;
+        i{
+          font-size: 20pt;
+          color: #CCC;
+          transition: 0.3s;
+        }
+        .namebtn{
+
+        }
+      }
+      .back:hover{
+        border: 1px solid #454545;
+        transition: 0.3s;
+        i{
+          color: #410099;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .blocks{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .blocks_column{
+        width: calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 20px;
+        .blocks_title{
+          width: 100%;
+          margin-bottom: 15px;
+          font-size: 18pt;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+        .staicdesc{
+          width: calc(100% - 30px);
+          height: 90px;
+          border: 1px solid #CCC;
+          resize: none;
+          outline: none;
+          padding: 10px;
+          margin-bottom: 10px;
+        }
+        .blocks_column_form{
+          display: flex;
+          width: 100%;
+          margin-bottom: 10px;
+          label{
+            width: 150px;
+            margin-right: 10px;
+          }
+          input{
+            width: calc(100% - 190px);
+            border: 1px solid #CCC;
+            outline: none;
+            padding: 10px;
+          }
+          textarea{
+            width: calc(100% - 190px);
+            height: 90px;
+            border: 1px solid #CCC;
+            resize: none;
+            outline: none;
+            padding: 10px;
+
+          }
+        }
+        .btn{
+          width: calc(100% - 10px);
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #CCC;
+          transition: .2s;
+          cursor: pointer;
+          margin-bottom: 10px;
+        }
+        .btn:hover{
+          background-color: #454545;
+          color: #FFF;
+          transition: .2s;
+        }
+        .blocks_list{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .blocks_list_check{
+            background-color: #CCC;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            i{
+              cursor: pointer;
+              transition: .2s;
+            }
+            i:hover{
+              color: #FFF;
+              transition: .2s;
+            }
+          }
+
+
+        }
+        .blocks_list_make{
+          width: calc(100% - 30px);
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          border: 1px solid #CCC;
+          margin-bottom: 10px;
+
+
+          .blocks_list_name{
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            p{
+              font-weight: 600;
+            }
+            i{
+              cursor: pointer;
+              transition: .2s;
+            }
+            i:hover{
+              color: #CCC;
+              transition: .2s;
+            }
+          }
+          .blocks_list_desc{}
+        }
+
+
+      }
+    }
+  }
+
+}
+

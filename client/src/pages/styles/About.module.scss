@@ -1,0 +1,40 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  color: #454545;
+  .titleabout{
+    font-size: 20pt;
+    font-weight: 600;
+    margin-left: 5px;
+  }
+  .text{
+    max-width: 700px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    margin-left: 5px;
+    margin-top: 10px;
+    outline: none;
+    resize: none;
+  }
+  .text:focus{
+    border: 1px solid #410099;
+  }
+  .btnsave{
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #CCC;
+    margin-left: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .btnsave:hover{
+    background-color: #410099;
+    border: 1px solid #410099;
+    color: #FFF;
+  }
+}

@@ -1,0 +1,82 @@
+.main{
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .company{
+    width: calc(250px / 2);
+    height: calc(360px / 2);
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: aliceblue;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 100%;
+    }
+    .active{
+      display: none;
+      width: calc(100% + 2px);
+      height: 10px;
+      background-color: #410099;
+      position: absolute;
+      bottom: -10px;
+      left: -1px;
+      border-radius: 0 0 2px 2px;
+      transition: 0.3s;
+    }
+  }
+  .company:hover{
+    transition: 0.3s;
+    .active{
+      display: flex;
+      transition: 0.3s;
+    }
+  }
+  .companyplus{
+    width: calc(250px / 2);
+    height: calc(360px / 2);
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    //background-color: aliceblue;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+      font-size: 40pt;
+      color: #CCC;
+    }
+    img{
+      width: 100%;
+    }
+    .active{
+      display: none;
+      width: calc(100% + 2px);
+      height: 10px;
+      background-color: #410099;
+      position: absolute;
+      bottom: -10px;
+      left: -1px;
+      border-radius: 0 0 2px 2px;
+      transition: 0.3s;
+    }
+  }
+  .companyplus:hover{
+    transition: 0.3s;
+    .active{
+      display: flex;
+      transition: 0.3s;
+    }
+  }
+}

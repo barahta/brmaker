@@ -1,0 +1,254 @@
+.bodymain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E1E1E1;
+  .main{
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100% - 80px);
+    display: flex;
+
+  }
+  .leftpath{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .centerpath{
+    width: calc(100% - 340px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 20px;
+    .nav{
+      display: flex;
+      .back{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border: 1px solid #CCC;
+        margin: 20px 10px 20px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #454545;
+        i{
+          font-size: 20pt;
+          color: #CCC;
+          transition: 0.3s;
+        }
+        .namebtn{
+
+        }
+      }
+      .back:hover{
+        border: 1px solid #454545;
+        transition: 0.3s;
+        i{
+          color: #410099;
+          transition: 0.3s;
+        }
+      }
+    }
+    .pluspost{
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border: 1px solid #CCC;
+      margin: 20px 0;
+      transition: 0.3s;
+      cursor: pointer;
+      i{
+        font-size: 20pt;
+        color: #CCC;
+        transition: 0.3s;
+      }
+      .namebtn{
+
+      }
+    }
+    .pluspost:hover{
+      border: 1px solid #454545;
+      transition: 0.3s;
+      i{
+        color: #410099;
+        transition: 0.3s;
+      }
+    }
+
+  }
+  .rightpath{
+    width: 80px;
+    margin-left: 20px;
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .point{
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #FFF;
+    color: #454545;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .point:hover{
+    //box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    background-color: #f1fcf9;
+    transition: 0.2s;
+
+  }
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+
+}
+.maingallery {
+  width: calc(100% - 20px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  margin-top: 50px;
+  .more{
+    width: calc(100% - 2px);
+    height: 120px;
+    border: 1px solid #454545;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .more:hover{
+    color: #FFFFFF;
+    background-color: #410099;
+    transition: .2s;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px; /* Пробел между элементами */
+  width: calc(100% - 20px);
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Фон для визуализации элементов */
+  //border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+  //&:hover {
+  //  transform: scale(1.10);
+  //  transition: 0.2s;
+  //  z-index: 100;
+  //}
+  .backitem{
+    display: none;
+  }
+  &:hover{
+    .backitem{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      i{
+        font-size: 40pt;
+        color: #f1f1f1;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .black{
+    display: none;
+    .delimg{}
+  }
+
+}
+
+.item:hover{
+  position: relative;
+  .black{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    .delimg{
+      color: #FFFFFF;
+    }
+  }
+}
+
+.loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(43, 28, 86, 0.63);
+
+
+  .indicate{
+    border: 8px solid rgba(0, 0, 0, 0.1); /* Легкий внешний цвет */
+    border-top: 8px solid #3498db; /* Цвет лоадера */
+    border-radius: 50%; /* Делает круг */
+    width: 50px; /* Ширина лоадера */
+    height: 50px; /* Высота лоадера */
+    animation: spin 1s linear infinite; /* Анимация вращения */
+    margin: 0 auto; /* Центрирование элемента */
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Начальная точка */
+    }
+    100% {
+      transform: rotate(360deg); /* Конечная точка */
+    }
+  }
+
+}

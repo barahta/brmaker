@@ -1,0 +1,8 @@
+{
+  "script": "npx",
+  "args": ["serve", "-s", "build", "--port", "3010"],
+  "name": "client10",
+  "cwd": "/var/www/adminomedia/client/",
+  "watch": false,
+  "autorestart": true
+}

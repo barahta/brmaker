@@ -1,0 +1,272 @@
+.bodymain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E1E1E1;
+  .main{
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100% - 80px);
+    display: flex;
+
+  }
+  .leftpath{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .centerpath{
+    width: calc(100% - 340px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 20px;
+    .nav{
+      display: flex;
+      .back{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border: 1px solid #CCC;
+        margin: 20px 10px 20px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #454545;
+        i{
+          font-size: 20pt;
+          color: #CCC;
+          transition: 0.3s;
+        }
+        .namebtn{
+
+        }
+      }
+      .back:hover{
+        border: 1px solid #454545;
+        transition: 0.3s;
+        i{
+          color: #410099;
+          transition: 0.3s;
+        }
+      }
+    }
+    .plusblockz{
+      display: flex;
+      flex-direction: column;
+
+      .photo{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #CCC;
+        background-size: cover;
+        background-position: center center;
+        cursor: pointer;
+        .active{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(255,255,255,0);
+          transition: 0.2s;
+          i{
+            color: #454545;
+            font-size: 20pt;
+          }
+        }
+      }
+      .photo:hover{
+
+
+        .active{
+
+          transition: 0.2s;
+          background-color: rgba(255,255,255,0.5);
+        }
+      }
+
+      input{
+        width: calc(80% - 20px);
+        border: 1px solid #CCC;
+        margin-top: 10px;
+        height: 40px;
+        padding: 0 10px;
+        outline: none;
+      }
+      input:focus{
+
+        border: 1px solid #454545;
+      }
+      .btnplus{
+        width: 80%;
+        height: 40px;
+        border: 1px solid #CCC;
+        margin-top: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+      }
+      .btnplus:hover{
+        background-color: #454545;
+        color: #FFF;
+        border: 1px solid #454545;
+        transition: 0.2s;
+      }
+      .listzones{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 80%;
+        margin-top: 10px;
+        .thiszone{
+          width: 100%;
+          height: 400px;
+          background-size: cover;
+          background-position: center center;
+          margin-bottom: 10px;
+          position: relative;
+          .back{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+          .texts{
+            width: 80%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 100px;
+            left: 10%;
+            z-index: 1;
+            color: #FFF;
+            .texts_name{
+              font-size: 24pt;
+            }
+            .texts_desc{
+              font-size: 14pt;
+            }
+          }
+          .tumbler{
+            width: 50px;
+            height: 90%;
+            position: absolute;
+            top: 5%;
+            right: 0px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input{
+              width: 30px;
+              padding: 0;
+              text-align: center;
+              max-width: 30px;
+              height: 40px;
+            }
+            .line_del{
+              width: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 20px;
+              i{
+                color: #FFF;
+                font-size: 20pt;
+                cursor: pointer;
+                transition: 0.2s;
+              }
+              i:hover{
+                color: #CCC;
+                transition: 0.2s;
+              }
+            }
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+  .rightpath{
+    width: 80px;
+    margin-left: 20px;
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .point{
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #FFF;
+    color: #454545;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .point:hover{
+    //box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    background-color: #f1fcf9;
+    transition: 0.2s;
+
+  }
+}
+
+.loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(43, 28, 86, 0.63);
+
+
+  .indicate{
+    border: 8px solid rgba(0, 0, 0, 0.1); /* Легкий внешний цвет */
+    border-top: 8px solid #3498db; /* Цвет лоадера */
+    border-radius: 50%; /* Делает круг */
+    width: 50px; /* Ширина лоадера */
+    height: 50px; /* Высота лоадера */
+    animation: spin 1s linear infinite; /* Анимация вращения */
+    margin: 0 auto; /* Центрирование элемента */
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Начальная точка */
+    }
+    100% {
+      transform: rotate(360deg); /* Конечная точка */
+    }
+  }
+
+}

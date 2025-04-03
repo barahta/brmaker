@@ -1,0 +1,220 @@
+.bodymain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E1E1E1;
+  .main{
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100% - 80px);
+    display: flex;
+
+  }
+  .leftpath{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .centerpath{
+    width: calc(100% - 320px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .nav{
+      display: flex;
+      .back{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border: 1px solid #CCC;
+        margin: 20px 10px 20px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #454545;
+        i{
+          font-size: 20pt;
+          color: #CCC;
+          transition: 0.3s;
+        }
+        .namebtn{
+
+        }
+      }
+      .back:hover{
+        border: 1px solid #454545;
+        transition: 0.3s;
+        i{
+          color: #410099;
+          transition: 0.3s;
+        }
+      }
+    }
+    .pluspost{
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border: 1px solid #CCC;
+      margin: 20px 0;
+      transition: 0.3s;
+      cursor: pointer;
+      i{
+        font-size: 20pt;
+        color: #CCC;
+        transition: 0.3s;
+      }
+      .namebtn{
+
+      }
+    }
+    .pluspost:hover{
+      border: 1px solid #454545;
+      transition: 0.3s;
+      i{
+        color: #410099;
+        transition: 0.3s;
+      }
+    }
+    .teachers{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+
+      .teacher{
+        width: calc(100% - 45px);
+        min-height: 100px;
+        padding: 20px;
+        border: 1px solid #CCC;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        .teacher_photo{
+          width: 250px;
+          height: 250px;
+          .teacher_photo_img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .teacher_desc{
+          width: calc(100% - 350px);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .teacher_desc_name{
+            font-size: 20pt;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          .teacher_desc_dev{
+            font-size: 18pt;
+            margin-bottom: 10px;
+          }
+          .teacher_desc_Line{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 5px;
+            .teacher_desc_Line_point{
+              width: 10px;
+              height: 10px;
+              border-radius: 10px;
+              background-color: #410099;
+              min-width: 10px;
+              min-height: 10px;
+              margin-right: 5px;
+              margin-top: 5px;
+            }
+            .teacher_desc_Line_text{}
+          }
+
+        }
+        .teacher_tools{
+          width: 45px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .teacher_tools_priory{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            input{
+              width: 30px;
+              height: 40px;
+              border: 1px solid #CCC;
+              outline: none;
+              text-align: center;
+            }
+          }
+
+          .teacher_tools_multi{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 30px;
+              i{
+                font-size: 20pt;
+                color: #454545;
+                cursor: pointer;
+                transition: .2s;
+                margin-bottom: 10px;
+              }
+            i:hover{
+              color: #CCC;
+              transition: .2s;
+            }
+
+          }
+        }
+      }
+    }
+
+
+  }
+  .rightpath{
+    width: 80px;
+    margin-left: 20px;
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .point{
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #FFF;
+    color: #454545;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .point:hover{
+    //box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    background-color: #f1fcf9;
+    transition: 0.2s;
+
+  }
+}

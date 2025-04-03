@@ -1,0 +1,528 @@
+.bodymain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E1E1E1;
+  .main{
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100% - 80px);
+    display: flex;
+
+  }
+  .leftpath{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .centerpath{
+    width: calc(100% - 320px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .nav{
+      display: flex;
+      .back{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border: 1px solid #CCC;
+        margin: 20px 10px 20px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #454545;
+        i{
+          font-size: 20pt;
+          color: #CCC;
+          transition: 0.3s;
+        }
+        .namebtn{
+
+        }
+      }
+      .back:hover{
+        border: 1px solid #454545;
+        transition: 0.3s;
+        i{
+          color: #410099;
+          transition: 0.3s;
+        }
+      }
+    }
+    .pluspost{
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border: 1px solid #CCC;
+      margin: 20px 0;
+      transition: 0.3s;
+      cursor: pointer;
+      i{
+        font-size: 20pt;
+        color: #CCC;
+        transition: 0.3s;
+      }
+      .namebtn{
+
+      }
+    }
+    .pluspost:hover{
+      border: 1px solid #454545;
+      transition: 0.3s;
+      i{
+        color: #410099;
+        transition: 0.3s;
+      }
+    }
+
+    .companygroup{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid #CCC;
+      .group_left{
+        width: 300px;
+      }
+      .group_center{
+        width: calc(100% - 500px);
+        .imgcover{
+          width: 90%;
+          height: 360px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        .group_center_name{}
+        .group_center_desc{
+          width: 90%;
+          margin-top: 20px;
+        }
+      }
+
+      .group_right{
+        width: 200px;
+        .group_right_position{
+
+          width: 30px;
+          height: 40px;
+          border: 1px solid #CCC;
+          background-color: #F1F1F1;
+          text-align: center;
+          outline: none;
+        }
+        .group_right_position:active{
+
+        }
+        .group_right_contact{
+          margin-top: 20px;
+          font-size: 10pt;
+        }
+        .group_right_delete{
+          width: 30px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 0;
+          margin-top: 20px;
+          i{
+            color: #454545;
+            font-size: 16pt;
+            cursor: pointer;
+          }
+          i:hover{
+            opacity: 0.8;
+          }
+          .delete_pos{
+            width: 200px;
+            height: 80px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+            border: 1px solid #CCC;
+            background-color: #FFF;
+            .delete_pos_quest{}
+            .delete_pos_btn{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 12px;
+              margin-top: 6px;
+              div{
+                padding: 5px 10px;
+                border: 1px solid #CCC;
+                margin: 0 5px;
+                cursor: pointer;
+              }
+              .delete_pos_btn_del{}
+              .delete_pos_btn_del:hover{
+                background-color: #bd3c4f;
+                color: #FFF;
+              }
+              .delete_pos_btn_cancel{}
+              .delete_pos_btn_cancel:hover{
+                background-color: #454545;
+                color: #FFF;
+              }
+            }
+
+          }
+
+        }
+        .edit{
+          width: 30px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 0;
+          margin-top: 20px;
+          i{
+            color: #454545;
+            font-size: 16pt;
+            cursor: pointer;
+          }
+          i:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+
+    }
+
+  }
+  .rightpath{
+    width: 80px;
+    margin-left: 20px;
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .point{
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #FFF;
+    color: #454545;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .point:hover{
+    //box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    background-color: #f1fcf9;
+    transition: 0.2s;
+
+  }
+}
+.list{
+  width: calc(100% - 60px);
+  padding: 0 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .blockman{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: fadeInUp 0.6s forwards;
+    //opacity: 0;
+    //transform: translateY(50px);
+    //transition: opacity 0.6s ease, transform 0.6s ease;
+    margin: 0 4px;
+    //&.visible {
+    //  opacity: 1;
+    //  transform: translateY(0);
+    //}
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    /* Анимация появления блока */
+
+    .photo{
+      width: calc(1920px / 4 - 50px);
+      height: calc(1920px / 3 - 50px);
+      max-width: 300px;
+      max-height: 400px;
+      background-image: url("../imgs/avatar.png");
+      background-size: cover;
+      background-position: center center;
+      margin: 30px 30px 5px 30px;
+    }
+    .fio{
+      width: calc(1920px / 4 - 50px);
+      max-width: 300px;
+      .name{
+        font-weight: 600;
+      }
+    }
+    .dev{
+      width: calc(1920px / 4 - 50px);
+      max-width: 300px;
+    }
+    .btncontact{
+      width: calc(1920px / 4 - 50px);
+      max-width: 300px;
+      padding: 20px 0;
+      margin-top: 20px;
+      border: 1px solid #454545;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .btncontact:hover{
+      background-color: rgba(72,20,160,1);
+      border: 1px solid rgba(72,20,160,1);
+      transition: 0.3s ease-in-out;
+      color: #FFFFFF;
+    }
+  }
+
+}
+.plusman{
+
+}
+.vakansii{
+  color: #454545;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 350px);
+  height: calc(100% - 20px);
+  .title{
+    font-weight: 600;
+    font-size: 30pt;
+    margin-left: 10px;
+    height: 60px;
+  }
+  .companies{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    .inputcom{
+      width: 300px;
+      height: 50px;
+      outline: none;
+      border: 1px solid #CCC;
+      padding: 0 10px;
+      margin: 10px;
+    }
+    .pluscombtn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 50px;
+      outline: none;
+      border: 1px solid #CCC;
+      padding: 0 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .pluscombtn:hover{
+
+      border: 1px solid #454545;
+      transition: 0.3s;
+    }
+    .listcom{
+      max-width: 750px;
+      padding: 10px;
+      min-height: 30px;
+      border: 1px solid #CCC;
+      margin: 10px;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      background-color: #FFFFFF;
+      .activecom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #CCC;
+        padding: 10px;
+        background-color: #F1F1F1;
+        margin: 10px;
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        .namecom{
+          margin-right: 20px;
+        }
+        i{
+          cursor: pointer;
+          transition: 0.2s;
+        }
+        i:hover{
+          color: #ef40d2;
+          transition: 0.2s;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+        to {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .newvak{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #CCC;
+    .titlevak{
+      margin-left: 10px;
+      font-size: 20pt;
+    }
+    .plusvakbtn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 50px;
+      outline: none;
+      border: 1px solid #CCC;
+      padding: 0 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .plusvakbtn:hover{
+      border: 1px solid #454545;
+      transition: 0.3s;
+    }
+  }
+  .listvak{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 0px);
+    height: calc(100% - 320px);
+    overflow-y: auto;
+    .thisvak{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: calc(100% - 50px);
+      min-height: calc(100px);
+      //max-height: content-box;
+      border: 1px solid #CCC;
+      padding: 20px;
+      color: #454545;
+      margin-bottom: 20px;
+      .vakcompany{
+        font-size: 10pt;
+        color: #898989;
+        padding: 5px 10px;
+        border: 1px solid #CCC;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      .vaktitle{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .vakname{
+          font-size: 16pt;
+          font-weight: 600;
+        }
+        .active{
+          display: flex;
+          align-items: center;
+          .open{
+            margin-right: 20px;
+            i{
+              font-size: 20pt;
+              cursor: pointer;
+              transition: 0.2s;
+            }
+            i:hover{
+              color: #410099;
+              transition: 0.2s;
+            }
+          }
+          .openbtn{}
+          .btnoff{
+            width: 70px;
+            height: 30px;
+            border: 3px solid #454545;
+            position: relative;
+            border-radius: 5px;
+            cursor: pointer;
+            .sphere{
+              width: 30px;
+              height: 26px;
+              background-color: #454545;
+              position: absolute;
+              top: 2px;
+              left: 3px;
+              border-radius: 5px;
+            }
+          }
+          .btnon{
+            width: 70px;
+            height: 30px;
+            border: 3px solid #410099;
+            position: relative;
+            border-radius: 5px;
+            cursor: pointer;
+            .sphere{
+              width: 30px;
+              height: 26px;
+              background-color: #410099;
+              position: absolute;
+              top: 2px;
+              right: 3px;
+              border-radius: 5px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

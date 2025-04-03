@@ -1,0 +1,461 @@
+.bodymain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E1E1E1;
+  .main{
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100% - 80px);
+    display: flex;
+
+  }
+  .leftpath{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .centerpath{
+    width: calc(100% - 340px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 20px;
+    .nav{
+      display: flex;
+      .back{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border: 1px solid #CCC;
+        margin: 20px 10px 20px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #454545;
+        i{
+          font-size: 20pt;
+          color: #CCC;
+          transition: 0.3s;
+        }
+        .namebtn{
+
+        }
+      }
+      .back:hover{
+        border: 1px solid #454545;
+        transition: 0.3s;
+        i{
+          color: #410099;
+          transition: 0.3s;
+        }
+      }
+    }
+    .pluspost{
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border: 1px solid #CCC;
+      margin: 20px 0;
+      transition: 0.3s;
+      cursor: pointer;
+      i{
+        font-size: 20pt;
+        color: #CCC;
+        transition: 0.3s;
+      }
+      .namebtn{
+
+      }
+    }
+    .pluspost:hover{
+      border: 1px solid #454545;
+      transition: 0.3s;
+      i{
+        color: #410099;
+        transition: 0.3s;
+      }
+    }
+
+  }
+  .rightpath{
+    width: 80px;
+    margin-left: 20px;
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .point{
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #FFF;
+    color: #454545;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .point:hover{
+    //box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    background-color: #f1fcf9;
+    transition: 0.2s;
+
+  }
+}
+
+.contants{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 20px;
+  //border-bottom: 1px solid #CCC;
+  .cities{
+    display: flex;
+    width: 100%;
+    .btn{
+      width: 150px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #CCC;
+      transition: .2s;
+      cursor: pointer;
+      margin-left: -1px;
+    }
+    .btn:hover{
+      background-color: #454545;
+      border: 1px solid #454545;
+      color: #FFF;
+      transition: .2s;
+    }
+    select{
+      width: 100%;
+      max-width: 380px;
+      border: 1px solid #CCC;
+      padding: 0 10px;
+      height: 52px;
+      outline: none;
+    }
+    option{}
+  }
+  .maincontact{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CCC;
+    .phone{
+      width: 50%;
+      max-width: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .plus{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        input{
+          width: calc(100% - 190px);
+          height: 50px;
+          padding: 0 10px;
+          border: 1px solid #CCC;
+          outline: none;
+        }
+        input:focus{
+          border: 1px solid #CCC;
+          border-bottom: 1px solid #410099;
+        }
+        .btn{
+          width: 150px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #CCC;
+          transition: .2s;
+          cursor: pointer;
+          margin-left: -1px;
+        }
+        .btn:hover{
+          background-color: #454545;
+          color: #FFF;
+          transition: .2s;
+        }
+      }
+      .list{
+        width: calc(100% - 10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 20px;
+        .elem{
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .point{
+            width: 8px;
+            min-width: 8px;
+            height: 8px;
+            min-height: 8px;
+            border-radius: 8px;
+            background-color: #454545;
+            margin-right: 10px;
+          }
+          .number{}
+        }
+
+      }
+    }
+    .adress{
+      width: 50%;
+      max-width: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .plus{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        input{
+          width: calc(100% - 190px);
+          height: 50px;
+          padding: 0 10px;
+          border: 1px solid #CCC;
+          outline: none;
+        }
+        input:focus{
+          border: 1px solid #CCC;
+          border-bottom: 1px solid #410099;
+        }
+        .btn{
+          width: 150px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #CCC;
+          transition: .2s;
+          cursor: pointer;
+          margin-left: -1px;
+        }
+        .btn:hover{
+          background-color: #454545;
+          color: #FFF;
+          transition: .2s;
+        }
+      }
+      .list{
+        width: calc(100% - 10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 20px;
+        .elem{
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .point{
+            width: 8px;
+            min-width: 8px;
+            height: 8px;
+            min-height: 8px;
+            border-radius: 8px;
+            background-color: #454545;
+            margin-right: 10px;
+          }
+          .number{}
+        }
+
+      }
+    }
+  }
+  .electroncontact{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CCC;
+    .email{
+      width: 50%;
+      max-width: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .plus{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        input{
+          width: calc(100% - 190px);
+          height: 50px;
+          padding: 0 10px;
+          border: 1px solid #CCC;
+          outline: none;
+        }
+        input:focus{
+          border: 1px solid #CCC;
+          border-bottom: 1px solid #410099;
+        }
+        .btn{
+          width: 150px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #CCC;
+          transition: .2s;
+          cursor: pointer;
+          margin-left: -1px;
+        }
+        .btn:hover{
+          background-color: #454545;
+          color: #FFF;
+          transition: .2s;
+        }
+      }
+      .list{
+        width: calc(100% - 10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 20px;
+        .elem{
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .point{
+            width: 8px;
+            min-width: 8px;
+            height: 8px;
+            min-height: 8px;
+            border-radius: 8px;
+            background-color: #454545;
+            margin-right: 10px;
+          }
+          .number{}
+        }
+
+      }
+    }
+    .map{
+      .title{
+        font-size: 20pt;
+        font-weight: 600;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+      .coordinat{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        .name{
+          width: 120px;
+          min-width: 120px;
+        }
+        input{
+          margin-left: 10px;
+          width: 200px;
+          height: 30px;
+          border: 1px solid #CCC;
+          outline: none;
+          padding: 0 10px;
+        }
+      }
+
+    }
+  }
+  .socialcontact{
+    width: 100%;
+    margin-top: 20px;
+    .soclist{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .line{
+        width: 100%;
+        max-width: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        border: 1px solid #CCC;
+        padding: 10px;
+        .name{
+
+          i{
+            font-size: 20pt;
+            width: 50px;
+            color: #454545;
+          }
+        }
+
+        input{
+            width: 100%;
+            max-width: 510px;
+          padding: 0 10px;
+          height: 30px;
+          border: none;
+          border-bottom: 1px solid #CCC;
+          outline: none;
+          margin-top: 7px;
+        }
+      }
+
+    }
+  }
+  .captercity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    color: #919090;
+    i{
+      font-size: 30pt;
+      margin-bottom: 20px;
+    }
+    .mess{
+
+    }
+  }
+
+}

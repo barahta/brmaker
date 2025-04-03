@@ -1,0 +1,93 @@
+.main{
+  width: 100%;
+  max-width: 450px;
+  height: 90%;
+  background-color: #FFFFFF;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .companyplus{
+    width: calc(250px / 1 - 40px);
+    height: calc(360px / 1 - 40px);
+    border: 1px solid #CCC;
+    padding: 20px;
+    cursor: pointer;
+    //background-color: aliceblue;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    i{
+      font-size: 40pt;
+      color: #CCC;
+    }
+    img{
+      width: 100%;
+    }
+    .active{
+      display: none;
+      width: calc(100% + 2px);
+      height: 10px;
+      background-color: #410099;
+      position: absolute;
+      bottom: -10px;
+      left: -1px;
+      border-radius: 0 0 2px 2px;
+      transition: 0.3s;
+    }
+  }
+  .companyplus:hover{
+    transition: 0.3s;
+    .active{
+      display: flex;
+      transition: 0.3s;
+    }
+  }
+  label{
+    font-size: 18pt;
+    color: #CCC;
+    margin-top: 15px;
+  }
+  .into{
+    width: 230px;
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #CCC;
+    transition: 0.2s;
+    font-family: 'ALS';
+  }
+  .into:focus{
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #410099;
+    transition: 0.2s;
+  }
+  .btn{
+    width: 230px;
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #454545;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+  .btn:hover{
+    color: #FFFFFF;
+    background-color: #410099;
+    border: 1px solid #410099;
+    transition: 0.2s;
+  }
+}
