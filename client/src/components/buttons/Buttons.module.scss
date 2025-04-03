@@ -1,0 +1,29 @@
+.main{
+  .title_left_right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 74px;
+    height: 24px;
+    border-radius: 3px;
+    border: 1px solid #B7B7B7;
+    box-shadow: 0px 1px 0px rgba(183, 183, 183, 0.5);
+
+    .btn_tit_left{
+      width: 36px;
+      height: 100%;
+      border-right: 1px solid #DBDBDB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn_tit_right{
+      width: 36px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
