@@ -1,0 +1,261 @@
+// МЕНЮ (РАЗДЕЛЫ В ОТКРЫТОМ ОКНЕ)
+.points_block{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .points_block_line{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .points_block_line_point{
+      height: 100%;
+      padding: 0 15px;
+      margin-right: 3px;
+      color: #1C55AE;
+      text-decoration: #1C55AE underline dashed;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 1px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .points_block_backcolor_grey{
+      background-color: #F2F2F2;
+      text-decoration: none;
+      color: #454545;
+    }
+  }
+}
+// БЛОК "ОТБОРЫ"
+.block_filters{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .block_filters_open{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #009646;
+
+    .block_filters_open_arrow{
+      margin-right: 15px;
+      margin-left: 2px;
+    }
+    .block_filters_open_name{
+      font-size: 13px;
+    }
+  }
+  .block_filters_positions{
+    width: 100%;
+    margin-top: 7px;
+    border-left: 1px solid #009646;
+    padding-left: 4px;
+    display: flex;
+    .block_filters_positions_list{
+      display: flex;
+      flex-direction: column;
+      //width: 600px;
+      //margin-right: 30px;
+      .block_filters_positions_line{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        margin: 7px 0 3px 0;
+        .block_f_p_line_left{
+          display: flex;
+          align-items: center;
+
+          .block_f_p_line_left_name{
+            margin-left: 5px;
+            margin-right: 7px;
+          }
+        }
+        .block_f_p_line_right{
+          display: flex;
+          align-items: center;
+
+
+          // ДАТА С и ПО
+          .block_f_p_line_right_dateinto{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            height: 15px;
+            //width: 408px;
+            .block_f_p_line_right_dateinto_input{
+              width: 70px;
+              height: 20px;
+              border: 1px solid #A0A0A0;
+              outline: none;
+              border-radius: 3px;
+              padding: 0px 3px;
+              margin-left: -2px;
+              margin-right: 10px;
+              font-size: 10px;
+            }
+            .block_f_p_line_right_dateinto_slash{
+
+              margin-right: 5px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+
+
+}
+
+// БЛОк "Обычная ТАБЛИЦА"
+.block_table{
+   width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .block_table_title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #E1E1E1;
+    height: 50%;
+    .block_table_title_td{
+      width: 50px;
+      height: calc(100% - 10px);
+      border: 1px solid #454545;
+      padding: 5px;
+      font-size: 10px;
+      margin-left: -1px;
+    }
+    .first{
+      width: 100px;
+    }
+  }
+  .block_table_line{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #FFF;
+    height: 50%;
+    .block_table_line_td{
+      width: 50px;
+      height: calc(100% - 10px);
+      border: 1px solid #454545;
+      padding: 5px;
+      margin-left: -1px;
+    }
+    .first{
+      width: 100px;
+    }
+  }
+}
+
+//БЛОК "СПИСОК"
+.block_list{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  position: relative;
+  .block_list_title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 30px;
+    .block_list_title_td{
+      width: 65px;
+      height: 100%;
+      border: 1px solid #CCC;
+      margin-bottom: 2px;
+      //padding: 5px;
+      font-size: 10px;
+      margin-left: -1px;
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .back{
+        width: calc(100% - 7px);
+        height: calc(100% - 2px);
+        background-color: #E1E1E1;
+        padding: 0 0 0 5px;
+      }
+    }
+    .first{
+      width: 100px;
+      padding: 0 0 0 0px;
+    }
+  }
+  .block_list_line{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #FFF;
+    height: 20px;
+    margin-top: 2px;
+    .block_list_line_td{
+      width: 68px;
+      height: calc(100%);
+      margin-left: -1px;
+    }
+    .first{
+      width: 100px;
+    }
+  }
+
+  .scrolling{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4px;
+    height: 45px;
+    position: absolute;
+    top: 32px;
+    right: 3px;
+    //background-color: #007aff;
+    .scrolling_up{
+      font-size: 8px;
+      color: #CCC;
+      height: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .scrolling_track{
+      height: calc(100% - 4px);
+      margin: 2px 0;
+      width: 100%;
+      background-color: #858585;
+      border-radius: 3px;
+      .scrolling_grabs{
+        height: 60%;
+        margin: 2px 0;
+        width: 100%;
+        background-color: #454545;
+        border-radius: 3px;
+      }
+    }
+
+  }
+
+}

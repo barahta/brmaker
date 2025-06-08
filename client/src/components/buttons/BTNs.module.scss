@@ -1,0 +1,32 @@
+
+.funbtn{
+  height: 24px;
+  padding: 0 14px;
+  border: 1px solid #9B9B9B;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #454545;
+  box-shadow: 0px 1px 0px rgba(183, 183, 183, 0.5);
+  background-image: linear-gradient(to bottom, #FEFEFE, #EDEDED);
+  margin-right: 0px;
+}
+.fun_b_l_b_make{
+  background-image: linear-gradient(to bottom, #FFE83C, #ECD000);
+}
+.fun_b_l_b_standart{}
+.fun_b_l_b_list{
+  p{
+    margin-left: 5px;
+  }
+}
+.fun_b_l_b_img{
+  width: 24px;
+  padding: 0;
+}
+
+
+
+

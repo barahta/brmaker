@@ -1,0 +1,12 @@
+.bear{
+  width: 115px;
+  height: 155px;
+  background-image: url("./imgs/bearforce.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  bottom: 20px;
+  right: 90px;
+  z-index: 99;
+}

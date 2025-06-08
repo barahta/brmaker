@@ -1,0 +1,22 @@
+.main{
+  width: calc(100% + 20px - 40px);
+  margin-left: -20px;
+  height: 40px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  font-size: 12px;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #454545;
+  .nav{
+    padding: 5px 10px;
+    border: 1px solid rgba(65, 0, 153, 0);
+    cursor: pointer;
+    &:hover{
+      border: 1px solid #410099;
+      color: #410099;
+    }
+  }
+}

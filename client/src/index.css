@@ -1,17 +1,34 @@
 ::-webkit-scrollbar {
   width: 8px;  /* Ширина всей полосы прокрутки */
+  height: 8px
 }
 
 ::-webkit-scrollbar-track {
   background-color: #CCC;  /* Цвет полосы прокрутки */
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #410099;  /* Цвет ползунка */
+  background-color: #858585;  /* Цвет ползунка */
   border-radius: 4px;  /* Закругленные края ползунка */
+
 }
-
-
+::-webkit-scrollbar-corner {
+  display: block;
+  height: 0;                 /* скрываем угол соединения */
+}
+::-webkit-resizer {
+  height: 8px !important;    /* делаем горизонтальную полосу тонкой */
+}
+/* Настройка горизнтальной полосы track */
+::-webkit-scrollbar-track-horizontal {
+  background-color: #ccc;    /* цвет фона горизонтальной полосы */
+  border-radius: 4px;        /* закругленные края */
+}
+/* Горизонтальная полоса должна иметь меньшую высоту */
+::-webkit-scrollbar-horizontal {
+  height: 8px;               /* устанавливаем нужную высоту */
+}
 *{
   margin: 0px;
   padding: 0px;

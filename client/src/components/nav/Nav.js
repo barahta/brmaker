@@ -22,6 +22,11 @@ function Navigation (){
                 <div className={style.name}>New project</div>
                 <div className={style.active}></div>
             </div>
+            <Link to='/staffingtable' className={style.point}>
+                <i className="fa-solid fa-clipboard-user"/>
+                <div className={style.name}>Staffing table</div>
+                <div className={style.active}></div>
+            </Link>
             <WriteModal activemodal={activemodal} setActivemodal={setActivemodal} data={<NewProject/>} setData={setData}/>
         </div>
     )

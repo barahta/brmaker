@@ -9,6 +9,8 @@ import {observer} from "mobx-react-lite";
 import AuthRouter from "./pages/auth/AuthRouter";
 import {Context} from "./index";
 import ThisProject from "./pages/ThisProject";
+import StaffingTable from "./pages/StaffingTable";
+import BTs from "./pages/BTs";
 
 
 function App() {
@@ -45,6 +47,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Main/>}/>
                     <Route path="/thisproject" element={<ThisProject/>}/>
+                    <Route path="/bt" element={<BTs/>}/>
+                    <Route path="/staffingtable" element={<StaffingTable/>}/>
 
                 </Routes>
                 <ToastContainer/>
