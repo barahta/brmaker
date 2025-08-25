@@ -288,4 +288,70 @@ position: absolute;
     margin-left: 5px;
   }
 }
+.colorText{
+  width: calc(100% - 12px);
+  margin-top: 10px;
+  .name{
+    font-size: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+  }
+  .contentbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    .colorBox{
+      width: 30px;
+      height: 30px;
+      border-radius: 2px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .cleanBTN{
+      color: #007aff;
+      font-size: 10px;
+      border-bottom: 1px solid #007aff;
+      cursor: pointer;
+    }
+  }
+}
 
+.communication{
+  width: calc(120px - 4px);
+  height: calc(36px - 4px);
+  border: 2px solid #FF467A;
+  border-radius: 3px;
+  color: #FF467A;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.del{
+  width: 118px;
+  height: 68px;
+  border: 1px solid #454545;
+  color: #454545;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  .icon{
+    font-size: 20px;
+    padding-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .name{
+    padding-right: 10px;
+    cursor: pointer;
+  }
+}

@@ -169,6 +169,7 @@ function NewLayer({ net, setNet, winEditEnter, setWinEditEnter, elements, setEle
         const name = event.dataTransfer.getData('elementName');
         const text = event.dataTransfer.getData('elementText');
         const editor = event.dataTransfer.getData('elementEditor');
+        const settings = JSON.parse(event.dataTransfer.getData('elementSet') || '[{connect:[]}]');
         const table = JSON.parse(event.dataTransfer.getData('elementTable') || '[]')
         const rect = workplaceRef.current.getBoundingClientRect();
 
@@ -181,6 +182,7 @@ function NewLayer({ net, setNet, winEditEnter, setWinEditEnter, elements, setEle
                 text,
                 table,
                 editor,
+                settings,
                 x: event.clientX - rect.left,
                 y: event.clientY - rect.top
             }

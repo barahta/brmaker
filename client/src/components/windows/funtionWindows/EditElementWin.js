@@ -1,7 +1,9 @@
 import style from './EditElementWin.module.scss'
 import {useEffect, useState} from "react";
 
-function ElemEditor({element}){
+function ElemEditor({element,winEditEnter,setWinEditEnter,elements,setElements,editElem,setEditElem,winEditBlock,setWinEditBlock}){
+
+    const [thisElem, setThisElem] = useState({})
     // console.log(element)
     const [kit, setKit] = useState({
         view: {
@@ -1515,81 +1517,118 @@ function ElemEditor({element}){
             }
         }
     ]
+
+    const delElem = (id) => {
+        let newElements = [...elements]
+        const resultElements = newElements.filter(elem => elem.id !== id)
+        setElements(resultElements)
+        setEditElem('')
+    }
+
     useEffect(()=>{
         setElem(+element.editor)
-        console.log(kit)
+        setThisElem(element)
+        console.log(element)
+        console.log(elements)
         // setKit(editor[+element.editor])
     }, [+element.editor])
     if(elem === 0){
         return (
             <div className={style.top}>
-                {(kit.view.active)??<div>видимость</div>}
+                {(thisElem.settings.view.active)??<div>видимость</div>}
             </div>
         )
     }
-    if(elem === 1){
+    if(elem === 1 && thisElem.settings){
         return (
             <div className={style.top}>
-                {(kit.view.active)&&<div className={style.view}>
-                    <div className={style.view_tit}>{kit.view.title}</div>
+                {(thisElem.settings.view.active)?<div className={style.view} style={(thisElem.settings.view.active)?{}:{display: 'none'}}>
+                    <div className={style.view_tit}>{thisElem.settings.view.title}</div>
                     <div className={style.tumbler}><div className={style.tumbler_box}></div></div>
-                </div>}
-                {(kit.description.active)&&<div className={style.description}>
+                </div>:''}
+                {(thisElem.settings.description.active)?<div className={style.description} style={(thisElem.settings.description.active)?{}:{display: 'none'}}>
                     <div className={style.icon}>
                         <i className="fa-solid fa-newspaper"/>
                     </div>
                     <div className={style.name}>
-                        {kit.description.title}
+                        {thisElem.settings.description.title}
                     </div>
-                </div>}
-                {(kit.editortable.active)&&<div className={style.editortable}>
-                    {kit.editortable.title}
-                </div>}
-                {(kit.value.active)&&<div className={style.value}>
-                    <div className={style.name}>{kit.value.title}</div>
+                </div>:''}
+                {(thisElem.settings.editortable.active)?<div className={style.editortable} style={(thisElem.settings.editortable.active === 1)?{}:{display: 'none'}}>
+                    {(thisElem.settings.editortable.active === 1)?thisElem.settings.editortable.title:''}
+                </div>:''}
+                {(thisElem.settings.value.active)?<div className={style.value} style={(thisElem.settings.value.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.value.title}</div>
                     <input type="text"/>
-                </div>}
-                {(kit.clue.active)&&<div className={style.clue}>
-                    <div className={style.name}>{kit.clue.title}</div>
+                </div>:''}
+                {(thisElem.settings.clue.active)?<div className={style.clue} style={(thisElem.settings.clue.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.clue.title}</div>
                     <input type="text"/>
-                </div>}
-                {(kit.sizeX.active)&&<div className={style.sizeX}>
-                    <div className={style.name}>{kit.sizeX.title}</div>
+                </div>:''}
+                {(thisElem.settings.sizeX.active)?<div className={style.sizeX} style={(thisElem.settings.sizeX.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.sizeX.title}</div>
                     <input type="number"/>
-                </div>}
-                {(kit.sizeY.active)&&<div className={style.sizeY}>
-                    <div className={style.name}>{kit.sizeY.title}</div>
+                </div>:''}
+                {(thisElem.settings.sizeY.active)?<div className={style.sizeY} style={(thisElem.settings.sizeY.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.sizeY.title}</div>
                     <input type="number"/>
-                </div>}
-                {(kit.dateStat.active)&&<div className={style.dateStat}>
-                    <div className={style.name}>{kit.dateStat.title}</div>
+                </div>:''}
+                {(thisElem.settings.dateStat.active)?<div className={style.dateStat} style={(thisElem.settings.dateStat.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.dateStat.title}</div>
                     <input type="date"/>
-                </div>}
-                {(kit.timeStat.active)&&<div className={style.timeStat}>
-                    <div className={style.name}>{kit.timeStat.title}</div>
+                </div>:''}
+                {(thisElem.settings.timeStat.active)?<div className={style.timeStat} style={(thisElem.settings.timeStat.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.timeStat.title}</div>
                     <input type="time"/>
-                </div>}
-                {(kit.required.active)&&<div className={style.required}>
+                </div>:''}
+                {(thisElem.settings.required.active)?<div className={style.required} style={(thisElem.settings.required.active)?{}:{display: 'none'}}>
                     <div className={style.checkbox}>
                         <div className={style.checkactive}></div>
                     </div>
-                    <div className={style.name}>{kit.required.title}</div>
-                </div>}
-                {(kit.modification.active)&&<div className={style.modification}>
-                    {kit.modification.content.map((btn, indexLine)=>(
+                    <div className={style.name}>{thisElem.settings.required.title}</div>
+                </div>:''}
+                {(thisElem.settings.modification.active)?<div className={style.modification} style={(thisElem.settings.modification.active)?{}:{display: 'none'}}>
+                    {thisElem.settings.modification.content.map((btn, indexLine)=>(
                         <div key={indexLine} className={style.btnline}>
                             <div className={style.checkbox}>
                                 <div className={style.checkactive}></div>
                             </div>
                         </div>
                     ))}
-                </div>}
-                {(kit.colorText.active)&&<div>{kit.colorText.title}</div>}
-                {(kit.colorBack.active)&&<div>{kit.colorBack.title}</div>}
-                {(kit.icon.active)&&<div>{kit.icon.title}</div>}
-                {(kit.selections.active)&&<div>{kit.selections.title}</div>}
-                {(kit.connects.active)&&<div>{kit.connects.title}</div>}
-                {(kit.delElement.active)&&<div>{kit.delElement.title}</div>}
+                </div>:''}
+                {(thisElem.settings.colorText.active)?<div className={style.colorText} style={(thisElem.settings.colorText.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.colorText.title}</div>
+                    <div className={style.contentbox}>
+                        <div className={style.colorBox} style={{backgroundColor: `${thisElem.settings.colorText.content}`}}></div>
+                        <div  className={style.cleanBTN}>Очистить</div>
+                    </div>
+                </div>:''}
+                {(thisElem.settings.colorBack.active)?<div className={style.colorText} style={(thisElem.settings.colorBack.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.colorBack.title}</div>
+                    <div className={style.contentbox}>
+                        <div className={style.colorBox} style={{backgroundColor: `${thisElem.settings.colorBack.content}`}}></div>
+                        <div className={style.cleanBTN}>Очистить</div>
+                    </div>
+                </div>:''}
+                {(thisElem.settings.icon.active)?<div className={style.colorText} style={(thisElem.settings.icon.active)?{}:{display: 'none'}}>
+                    <div className={style.name}>{thisElem.settings.icon.title}</div>
+                    <div className={style.contentbox}>
+                        <div className={style.colorBox} style={{backgroundColor: `${thisElem.settings.icon.content}`}}></div>
+                        <div className={style.cleanBTN}>Очистить</div>
+                    </div>
+                </div>:''}
+                {(thisElem.settings.selections.active)?
+                    <div style={(thisElem.settings.selections.active)?{}:{display: 'none'}}>{thisElem.settings.selections.title}</div>
+                    :''}
+                {(thisElem.settings.connects.active)?<div className={style.communication} style={(thisElem.settings.connects.active)?{}:{display: 'none'}}>{thisElem.settings.connects.title}</div>:''}
+                {(thisElem.settings.delElement.active)?<div className={style.del} style={(thisElem.settings.delElement.active)?{}:{display: 'none'}} onClick={()=>delElem(thisElem.id)}>
+                    <div className={style.icon}>
+                        <i className="fa-solid fa-trash"/>
+                    </div>
+                    <div className={style.name}>
+                        {thisElem.settings.delElement.title}
+                    </div>
+                </div>:''}
             </div>
         )
     }
@@ -1680,7 +1719,7 @@ function EditElementWin({winEditEnter, setWinEditEnter, elements, setElements, e
         <div className={`${style.main} ${winEditEnter ? style.open : ''}`}>
             {/*<div className={style.exit} onClick={()=>{setWinEditEnter(false)}}><i className="fa-solid fa-xmark"/></div>*/}
             {/*<div className={style.top}>*/}
-                <ElemEditor element={editElem}/>
+                <ElemEditor element={editElem} winEditEnter={winEditEnter} setWinEditEnter={setWinEditEnter} elements={elements} setElements={setElements} editElem={editElem} setEditElem={setEditElem} winEditBlock={winEditBlock} setWinEditBlock={setWinEditBlock}/>
                 {/*<div className={style.button} onClick={()=>setWinEditBlock(true)}><i className="fa-regular fa-pen-to-square"></i></div>*/}
                 {/*<div className={style.button}><i className="fa-solid fa-newspaper"></i></div>*/}
                 {/*<div className={style.inputblock}>*/}

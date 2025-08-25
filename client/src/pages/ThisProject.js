@@ -12,6 +12,10 @@ import NewLayer from "../components/layers/NewLayer";
 import EditElementWin from "../components/windows/funtionWindows/EditElementWin";
 import EditBlockWin from "../components/windows/funtionWindows/EditBlockWin";
 import Bear from "../components/chat/Bear";
+import * as PropTypes from "prop-types";
+
+
+
 
 function ThisProject () {
     const params = useParams()
